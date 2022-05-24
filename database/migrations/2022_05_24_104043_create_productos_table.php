@@ -23,6 +23,29 @@ class CreateProductosTable extends Migration
             $table->string('kcal');
             $table->string('informacion_nutricional');
         });
+
+
+        // Insert some stuff
+        DB::table('productos')->insert(
+            Array([
+                'nombre_producto' => 'Pata de jamón',
+                'descripcion_producto' => 'Pata de jamon de bellota',
+                'imagen_producto' => 'jamon.png',
+                'pais_procedencia' => 'España',
+                'precio_producto' => 300,
+                'kcal' => 'pocas',
+                'informacion_nutricional' => 'nada que decir tss'
+            ],
+            [
+                'nombre_producto' => 'CocaCola',
+                'descripcion_producto' => 'cocacola fresca',
+                'imagen_producto' => 'coca-cola.jpg',
+                'pais_procedencia' => 'EEUU',
+                'precio_producto' => 1,
+                'kcal' => 'muchas',
+                'informacion_nutricional' => 'mucha azucar'
+            ])
+        );
     }
 
     /**
