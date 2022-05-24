@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\ControllerComprar;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,5 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [ProductoController::class,'product']);
+Route::get('/comprar', [ControllerComprar::class, 'index']);
 Route::get('/detail/{id}', [DetailController::class,'index']);
