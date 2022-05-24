@@ -9,9 +9,9 @@
                 <div class="alert alert-danger mt-3" role="alert">
                    Aún no has iniciado sesión, no puedes ver el area de productos :(
                 </div>
-                <a href="{{ url('/login') }}" class="btn btn-info m-3">Iniciar sesión</a>
+                <a href="{{ url('/login') }}" class="btn btn-primary m-3">Iniciar sesión</a>
                 @endif
-
+                
                 @else
                 <div class="card-header">{{ __('Productos') }}</div>
                 <div class="card-body">
