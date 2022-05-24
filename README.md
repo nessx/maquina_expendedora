@@ -23,12 +23,24 @@ Antes de empezar a utilizar el proyecto tienes que haber creado una base de dato
 
  :: si deseas cambiar el usuario y contraseña lo encontraras en el fichero .env ::
 
-Una vez creada la base de datos y verificar que el usuario **root** existe desde la termina dentro del la carpeta debemos ejecutar las **migraciones**
+Instamaos **php-curl** 
+
+> sudo apt-get install php-curl
+
+Desde la termina dentro de la carpeta debemos ejecutar 
+
+> composer install
+
+Regeneramos la api_key
+
+> php artisan key:generate
+
+Ejecutamos las migraciones
 
 > php artisan migrate
 
 
-Una vez creadas las bases de datos ya puedes ejecutar la aplicacion con: 
+Una vez creadas las bases de datos ya puedes ejecutar la aplicacion con
 
 >  php artisan serve
 
@@ -41,3 +53,14 @@ El email y contraseña para acceder al software es:
 
 Para cambiar el usuario en cuestion o añadir uno nuevo puedes hacerlo en el fichero
 **2014_10_12_000000_create_users_table.php**
+
+
+## Solucion a posibles problemas
+
+En ocasiones puede haberse cacheado alguna informacion y no funcionar de manera correcta con estos 3 comandos puedes solucionar 
+
+> php artisan config:cache
+
+> php artisan config:clear
+
+> composer dump-autoload -o
