@@ -23,7 +23,19 @@ Antes de empezar a utilizar el proyecto tienes que haber creado una base de dato
 
  :: si deseas cambiar el usuario y contraseña lo encontraras en el fichero .env ::
 
-Una vez creada la base de datos y verificar que el usuario **root** existe desde la termina dentro del la carpeta debemos ejecutar las **migraciones**
+Instamaos **php-curl** 
+
+> sudo apt-get install php-curl
+
+desde la termina dentro de la carpeta debemos ejecutar 
+
+> composer install
+
+Regeneramos la api_key
+
+> php artisan key:generate
+
+Ejecutamos las migraciones
 
 > php artisan migrate
 
