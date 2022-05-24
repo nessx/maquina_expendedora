@@ -16,6 +16,7 @@
                             <figcaption>Kcal: {{$product_detail->kcal}}</figcaption>
                             <figcaption>Precio: {{$product_detail->precio_producto}}€</figcaption>
                         </figure>
+                        
                         <button type="button" class="btn btn-success m-3">Comprar</button>
                         <button type="button" class="btn btn-dark">Página principal</button>
                 </div>
