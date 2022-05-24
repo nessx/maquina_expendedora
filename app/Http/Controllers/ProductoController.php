@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Producto;
 
 class ProductoController extends Controller
 {
     //
-    function getproductos(){
-        $products = Product::all();
-        return view('/home', compact('products'));   
+    public function product(){
+        $products = Producto::all();
+        return view('home', compact('products'));
     }
 }

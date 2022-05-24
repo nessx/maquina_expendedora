@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\DetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,14 +13,9 @@ use App\Http\Controllers\ProductoController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-
-
-Route::get('/', function () {
-    return view('home');
-});
 */
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [ProductoController::class,'getproductos']);
-//Route::get('/detail/{id}',[DetailController::class,'index'])->midd
+Route::get('/', [ProductoController::class,'product']);
+Route::get('/detail/{id}', [DetailController::class,'product_detail']);
