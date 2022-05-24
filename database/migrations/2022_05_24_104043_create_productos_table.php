@@ -19,7 +19,7 @@ class CreateProductosTable extends Migration
             $table->string('descripcion_producto');
             $table->string('imagen_producto');
             $table->string('pais_procedencia');
-            $table-integer('precio_producto');
+            $table->integer('precio_producto');
             $table->string('kcal');
             $table->string('informacion_nutricional');
         });
