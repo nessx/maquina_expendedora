@@ -27,7 +27,7 @@ Instamaos **php-curl**
 
 > sudo apt-get install php-curl
 
-desde la termina dentro de la carpeta debemos ejecutar 
+Desde la termina dentro de la carpeta debemos ejecutar 
 
 > composer install
 
@@ -40,7 +40,7 @@ Ejecutamos las migraciones
 > php artisan migrate
 
 
-Una vez creadas las bases de datos ya puedes ejecutar la aplicacion con: 
+Una vez creadas las bases de datos ya puedes ejecutar la aplicacion con
 
 >  php artisan serve
 
@@ -53,3 +53,14 @@ El email y contraseña para acceder al software es:
 
 Para cambiar el usuario en cuestion o añadir uno nuevo puedes hacerlo en el fichero
 **2014_10_12_000000_create_users_table.php**
+
+
+## Solucion a posibles problemas
+
+En ocasiones puede haberse cacheado alguna informacion y no funcionar de manera correcta con estos 3 comandos puedes solucionar 
+
+> php artisan config:cache
+
+> php artisan config:clear
+
+> composer dump-autoload -o
