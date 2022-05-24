@@ -10,7 +10,6 @@ class DetailController extends Controller
     //
     public function product_detail($id){
         $product_detail = Producto::where('id', '=', $id);
-
-        return view('detail', compact('product_detail'));
+        print_r($product_detail);
     }
 }
