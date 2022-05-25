@@ -19,7 +19,11 @@ tambien debes instalar Maria db o mysql
 
 ## Get starter
 
-Antes de empezar a utilizar el proyecto tienes que haber creado una base de datos llamada **laravel** el usuario que utilizamos es **root** y no tiene contraseña
+Antes de empezar a utilizar el proyecto tienes que haber creado una base de datos llamada **laravel** o poner la tuya propia en el archivo .env en la linea **DB_DATABASE=TU_BBDD** el usuario que utilizamos es **root** y no tiene contraseña
+
+pero tu puedes añadir el tuyo propio en el archivo ".env" en los apartados:
+DB_USERNAME=TU_USUARIO
+DB_PASSWORD=TU_CONTRASEÑA
 
  :: si deseas cambiar el usuario y contraseña lo encontraras en el fichero .env ::
 
